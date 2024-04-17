@@ -1,0 +1,39 @@
+$color-white: #FFFFFF
+$color-blue: #5200D9
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap')
+
+@mixin respond($breakpoint)
+    @if $breakpoint == phone-min
+        @media only screen and (max-width: 514px)
+            @content
+
+    @if $breakpoint == phone
+        @media only screen and (max-width: 744px)
+            @content
+
+    @if $breakpoint == tab-port
+        @media only screen and (max-width: 914px)
+            @content
+
+    @if $breakpoint == tab-land
+        @media only screen and (max-width: 1220px)
+            @content
+
+*, ::after, ::before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    font-size: 62.5%
+
+ul
+    list-style-type: none
+
+a
+    text-decoration: none
+
+.container
+    max-width: 1240px
+    margin: 0 auto
