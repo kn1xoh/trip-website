@@ -8,19 +8,41 @@
     padding: 0rem 4rem
     background: $color-white
     &__search-country
+        position: relative
         border-right: 1px solid $color-blue
+        padding-right: 4rem
     &__input-country
         font-family: "Inter", sans-serif
         font-weight: 300
         font-size: 1.8rem
-        width: 38rem
+        width: 30rem
         height: 4.8rem
         border: none
+        cursor: text
     &__country-list
         display: none
+        position: absolute
+        top: 7.4rem
+        left: -4rem
+        font-family: "Inter", sans-serif
+        font-weight: 300
+        font-size: 1.8rem
+        color: $color-dark
+        width: 38rem
+        height: 18rem
+        background-color: $color-white
+        border-radius: 0.5rem
+        z-index: 1
+        overflow-y: scroll
+        scroll-behavior: smooth
+    &__country-item
+        padding: 1.2rem 4rem
+        cursor: pointer
+        &:hover
+            background-color: $color-blue-light
     &__date
         border-right: 1px solid $color-blue
-        padding: 0 4.4rem
+        padding: 0 6rem
     &__date-input
         font-family: "Inter", sans-serif
         font-weight: 300
@@ -35,10 +57,13 @@
         font-family: "Inter", sans-serif
         font-weight: 300
         font-size: 1.8rem
-        width: 32rem
         padding-left: 4rem
+        width: 32rem
     &__select-person-icon
         width: 1.3rem
         height: 0.7rem
     &__persons-calc
         position: absolute
+
+.country-list--active
+    display: block
