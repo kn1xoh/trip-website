@@ -13,7 +13,7 @@
         padding-right: 4rem
     &__input-country
         font-family: "Inter", sans-serif
-        font-weight: 300
+        font-weight: 400
         font-size: 1.8rem
         width: 30rem
         height: 4.8rem
@@ -25,7 +25,7 @@
         top: 7.4rem
         left: -4rem
         font-family: "Inter", sans-serif
-        font-weight: 300
+        font-weight: 400
         font-size: 1.8rem
         color: $color-dark
         width: 38rem
@@ -34,7 +34,6 @@
         border-radius: 0.5rem
         z-index: 1
         overflow-y: scroll
-        scroll-behavior: smooth
     &__country-item
         padding: 1.2rem 4rem
         cursor: pointer
@@ -45,25 +44,76 @@
         padding: 0 6rem
     &__date-input
         font-family: "Inter", sans-serif
-        font-weight: 300
+        font-weight: 400
         font-size: 1.8rem
         width: 12.7rem
         height: 4.8rem
         border: none
+        cursor: pointer
     &__persons
-        display: flex
-        justify-content: space-between
-        align-items: center
+        position: relative
         font-family: "Inter", sans-serif
-        font-weight: 300
+        font-weight: 400
         font-size: 1.8rem
         padding-left: 4rem
         width: 32rem
+    &__persons-wrap
+        display: flex
+        justify-content: space-between
+        align-items: center
+        cursor: pointer
+    &__persons-label
+        cursor: pointer
     &__select-person-icon
         width: 1.3rem
         height: 0.7rem
-    &__persons-calc
-        position: absolute
 
 .country-list--active
     display: block
+
+.person-calc
+    display: none
+    position: absolute
+    top: 6.1rem
+    left: 0
+    width: 36rem
+    font-family: "Inter", sans-serif
+    font-weight: 400
+    color: $color-dark
+    background: $color-white
+    border-radius: 0.5rem
+    padding: 2rem 3.9rem
+    z-index: 1
+    &__wrap
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &:not(:last-child)
+            margin-bottom: 1.2rem
+        &:nth-child(1)
+            margin-bottom: 1.5rem
+    &__title
+        font-size: 1.6rem
+        span
+            font-size: 1.2rem
+            opacity: 0.5
+    &__counter
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 8.7rem
+        border: 1px solid $color-dark
+        border-radius: 0.5rem
+        padding: 0.6rem 0.8rem
+    &__icon
+        height: 1.6rem
+        width: 1.6rem
+        cursor: pointer
+    &__number
+        font-weight: 400
+
+.person-calc--active
+    display: block
+
+.select-person-icon--active
+    transform: rotate(0.5turn)
