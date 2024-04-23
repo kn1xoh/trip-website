@@ -45,6 +45,21 @@ inputDate.forEach((input) => {
   });
 });
 
+// Отображение текущей даты в фильтре
+function currentDate() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = `${now.getMonth()}`.padStart(2, 0);
+  const date = `${now.getDate()}`.padStart(2, 0);
+  const currentInput = `${year}-${month}-${date}`;
+
+  inputDate.forEach((date) => {
+    date.value = currentInput;
+  });
+}
+
+currentDate();
+
 // Клик на "1 человек"
 persons.addEventListener("click", function () {
   accordeonList.classList.remove("accordeon-list--active");
@@ -64,6 +79,7 @@ personNumber.forEach((item) => {
   item.nextElementSibling.addEventListener("click", function () {
     count = Number(this.previousElementSibling.textContent);
     this.previousElementSibling.textContent = count + 1;
+    countTotalPersons();
   });
 });
 
@@ -74,5 +90,28 @@ personNumber.forEach((item) => {
     if (count > 0) {
       this.nextElementSibling.textContent = count - 1;
     }
+    countTotalPersons();
   });
 });
+
+// Подсчет общего количества человек
+const totalPersons = document.querySelector("#total-persons");
+const labelPersons = document.querySelector("#label-persons");
+
+function countTotalPersons() {
+  let allPersons = 0;
+
+  personNumber.forEach((num) => {
+    allPersons += Number(num.textContent);
+  });
+
+  if (
+    (allPersons % 10 == 2 || allPersons % 10 == 3 || allPersons % 10 == 4) &&
+    Math.floor(allPersons / 10) != 1
+  ) {
+    labelPersons.textContent = " человека";
+  } else {
+    labelPersons.textContent = " человек";
+  }
+  totalPersons.textContent = allPersons;
+}
