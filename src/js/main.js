@@ -84,10 +84,12 @@ personNumber.forEach((item) => {
 });
 
 //Клик на минус во вкладке "1 человек"
+const totalPersons = document.querySelector("#total-persons");
+
 personNumber.forEach((item) => {
   item.previousElementSibling.addEventListener("click", function () {
     count = Number(this.nextElementSibling.textContent);
-    if (count > 0) {
+    if (count > 0 && Number(totalPersons.textContent) > 1) {
       this.nextElementSibling.textContent = count - 1;
     }
     countTotalPersons();
@@ -95,7 +97,6 @@ personNumber.forEach((item) => {
 });
 
 // Подсчет общего количества человек
-const totalPersons = document.querySelector("#total-persons");
 const labelPersons = document.querySelector("#label-persons");
 
 function countTotalPersons() {
