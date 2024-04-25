@@ -1,0 +1,58 @@
+.section-reviews
+    margin-bottom: 20rem
+    &__title
+        text-align: center
+        margin-bottom: 5rem
+    &__review-wrap
+        display: grid
+        grid-template-columns: repeat(4, 29.5rem)
+        grid-template-rows: 22rem
+        gap: 2rem
+        margin-bottom: 1.6rem
+    &__slider-dots
+        display: flex
+        justify-content: center
+        gap: 0.4rem
+    &__dot
+        width: 0.8rem
+        height: 0.8rem
+        border: 1px solid $color-blue
+        border-radius: 100%
+        cursor: pointer
+
+.dot--active
+    background: $color-blue
+
+.review
+    font-family: "Inter", sans-serif
+    width: 29.5rem
+    height: 22rem
+    font-size: 1.4rem
+    line-height: 160%
+    color: $color-dark
+    background: $color-back
+    border-radius: 0.5rem
+    padding: 2rem
+    &__star-date
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 1.3rem
+    &__star
+        width: 13.6rem
+        height: 2.4rem
+    &__date
+        font-weight: 300
+    &__text
+        font-weight: 400
+        margin-bottom: 2.6rem
+    &__person-wrap
+        display: flex
+        align-items: center
+    &__img
+        width: 3.2rem
+        height: 3.2rem
+        border-radius: 100%
+        margin-right: 0.6rem
+    &__name
+        font-weight: 300
