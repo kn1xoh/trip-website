@@ -116,3 +116,81 @@ function countTotalPersons() {
   }
   totalPersons.textContent = allPersons;
 }
+
+// Слайдер
+const slider = document.querySelector(".slider");
+const slides = document.querySelectorAll(".slide");
+const dotsContainer = document.querySelector(".slider-dots");
+
+let currSlide = 0;
+const maxSlides = slides.length;
+
+function createDots() {
+  slides.forEach(function (_, i) {
+    dotsContainer.insertAdjacentHTML(
+      "beforeend",
+      `
+      <button class="slider-dots__dot" data-slide="${i}"></button>
+    `
+    );
+  });
+}
+createDots();
+
+function goToSlide(slide) {
+  slides.forEach(function (s, i) {
+    s.style.transform = `translateX(${100 * (i - slide)}%)`;
+  });
+}
+
+function activateDots(slide) {
+  document.querySelectorAll(".slider-dots__dot").forEach(function (dot) {
+    dot.classList.remove("dot--active");
+  });
+  document
+    .querySelector(`.slider-dots__dot[data-slide="${slide}"]`)
+    .classList.add("dot--active");
+}
+
+goToSlide(0);
+activateDots(0);
+
+function nextSlide() {
+  if (currSlide === maxSlides - 1) {
+    currSlide = 0;
+  } else {
+    currSlide++;
+  }
+  goToSlide(currSlide);
+  activateDots(currSlide);
+}
+
+function prevSlide() {
+  if (currSlide === 0) {
+    currSlide = maxSlides - 1;
+  } else {
+    currSlide--;
+  }
+
+  goToSlide(currSlide);
+  activateDots(currSlide);
+}
+
+// Следующий слайд при нажатии на точки
+dotsContainer.addEventListener("click", function (e) {
+  if (e.target.classList.contains("slider-dots__dot")) {
+    const slide = e.target.dataset.slide;
+    goToSlide(slide);
+    activateDots(slide);
+  }
+});
+
+// Следующий слайд через клавиатуру
+document.addEventListener("keydown", function (e) {
+  if (e.key === "ArrowLeft") {
+    prevSlide();
+  }
+  if (e.key === "ArrowRight") {
+    nextSlide();
+  }
+});
