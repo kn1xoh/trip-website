@@ -126,5 +126,5 @@ exports.styles = styles;
 exports.scripts = scripts;
 exports.watching = watching;
 
-exports.build = series(cleanDist, building, htmlCompress, sprite);
+exports.build = series(cleanDist, building, htmlCompress);
 exports.default = parallel(styles, scripts, watching);
