@@ -1,5 +1,7 @@
 .section-reviews
     margin-bottom: 20rem
+    @include adaptive(custom-928px)
+        margin-bottom: 150px
     &__title
         text-align: center
         margin-bottom: 5rem
@@ -18,8 +20,13 @@
     display: grid
     grid-template-columns: repeat(4, 29.5rem)
     grid-template-rows: 22rem
+    justify-content: center
     gap: 2rem
     transition: transform 1s
+    @include adaptive(extra-large)
+        grid-template-columns: repeat(3, 29.5rem)
+    @include adaptive(custom-928px)
+        grid-template-columns: repeat(2, 29.5rem)
 
 .slider-dots
     display: flex
@@ -43,7 +50,7 @@
     line-height: 160%
     color: $color-dark
     background: $color-back
-    border-radius: 0.5rem
+    border-radius: 5px
     padding: 2rem
     &__star-date
         display: flex
@@ -68,3 +75,7 @@
         margin-right: 0.6rem
     &__name
         font-weight: 300
+
+.review-1
+    @include adaptive(extra-large)
+        display: none

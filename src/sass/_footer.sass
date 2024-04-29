@@ -4,19 +4,29 @@
     &__container
         display: flex
         justify-content: space-between
+        gap: 5.2rem
+        @include adaptive(medium)
+            position: relative
     &__title
         margin-bottom: 1.2rem
     &__link
         font-family: "Inter", sans-serif
         font-weight: 400
-        font-size: 1.4rem
+        font-size: 14px
         line-height: 160%
         color: $color-dark
+    &__social
+        @include adaptive(medium)
+            position: absolute
+            bottom: -150px
+            padding-bottom: 55px
     &__social-wrap
         display: flex
         flex-wrap: wrap
         gap: 1.5rem
         width: 17.3rem
+        @include adaptive(medium)
+            width: 100%
     &__social-icon
         width: 3.2rem
         height: 3.2rem

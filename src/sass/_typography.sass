@@ -3,12 +3,20 @@
     font-weight: 800
     font-size: 4rem
     color: $color-white
+    @include adaptive(extra-large)
+        font-size: 32px
+    @include adaptive(medium)
+        font-size: 24px
 
 .title-2
     font-family: "Inter", sans-serif
     font-weight: 300
     font-size: 2.8rem
     color: $color-white
+    @include adaptive(extra-large)
+        font-size: 24px
+    @include adaptive(medium)
+        font-size: 16px
 
 .title-3
     font-family: "Inter", sans-serif
@@ -16,6 +24,8 @@
     font-size: 3.2rem
     line-height: 113%
     color: $color-dark
+    @include adaptive(extra-large)
+        font-size: 24px
 
 .title-4
     font-family: "Inter", sans-serif
@@ -30,3 +40,5 @@
     font-size: 1.5rem
     line-height: 170%
     color: $color-dark
+    @include adaptive(extra-large)
+        font-size: 14px

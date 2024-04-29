@@ -1,5 +1,7 @@
 .section-cards
     margin-bottom: 15rem
+    @include adaptive(extra-large)
+        margin-bottom: 100px
     &__title
         text-align: center
         margin-bottom: 5.6rem
@@ -8,31 +10,53 @@
         grid-template-columns: repeat(4, 29.5rem)
         grid-template-rows: 29.5rem
         gap: 2rem
+        justify-content: center
+        @include adaptive(extra-large)
+            grid-template-columns: repeat(4, 213px)
+            grid-template-rows: 213px
+        @include adaptive(large)
+            grid-template-columns: repeat(2, 354px)
+            grid-template-rows: repeat(2, 213px)
     &__card
         position: relative
         display: flex
         flex-direction: column
+        justify-content: center
         align-items: center
         background: $color-back
-        border-radius: 0.5rem
+        border-radius: 5px
         padding: 3.4rem 4.2rem
+        @include adaptive(extra-large)
+            padding: 0 0 0.8rem 0
+        @include adaptive(large)
+            justify-content: center
     &__number
         font-family: "Inter", sans-serif
         font-weight: 800
-        font-size: 12.8rem
+        font-size: 128px
         color: $color-blue
         opacity: 0.1
         position: absolute
         top: 0
         left: 0
         padding-left: 2rem
+        @include adaptive(extra-large)
+            font-size: 93px
+            padding-left: 0.7rem
+            transform: translateY(-14px)
+        @include adaptive(large)
+            padding-top: 10px
+            padding-left: 32px
     &__icon
         margin-top: 4rem
         margin-bottom: 3rem
+        @include adaptive(extra-large)
+            margin-top: 0
+            margin-bottom: 0
     &__text
         font-family: "Inter", sans-serif
         font-weight: 400
-        font-size: 1.6rem
+        font-size: 16px
         line-height: 150%
         text-align: center
         color: black
@@ -40,9 +64,26 @@
 .icon-card-1
     width: 9rem
     height: 11.4rem
+    @include adaptive(extra-large)
+        width: 78px
+        height: auto
+    @include adaptive(large)
+        width: 90px
+
 .icon-card-2
     width: 11.2rem
     height: 11.2rem
+    @include adaptive(extra-large)
+        width: 97px
+        height: auto
+    @include adaptive(large)
+        width: 112px
+
 .icon-card-3, .icon-card-4
-    width: 14.4rem
-    height: 14.4rem
+    width: 11.4rem
+    height: 11.4rem
+    @include adaptive(extra-large)
+        width: 100px
+        height: auto
+    @include adaptive(large)
+        width: 114px

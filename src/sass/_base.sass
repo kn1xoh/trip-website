@@ -6,21 +6,33 @@ $color-back: rgba(82, 0, 217, 0.1)
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap')
 
-@mixin respond($breakpoint)
-    @if $breakpoint == phone-min
-        @media only screen and (max-width: 514px)
+@mixin adaptive($breakpoint)
+    @if $breakpoint == extra-small
+        @media only screen and (max-width: 360px)
             @content
 
-    @if $breakpoint == phone
-        @media only screen and (max-width: 744px)
+    @if $breakpoint == small
+        @media only screen and (max-width: 576px)
             @content
 
-    @if $breakpoint == tab-port
-        @media only screen and (max-width: 914px)
+    @if $breakpoint == medium
+        @media only screen and (max-width: 768px)
             @content
 
-    @if $breakpoint == tab-land
-        @media only screen and (max-width: 1220px)
+    @if $breakpoint == custom-928px
+        @media only screen and (max-width: 928px)
+            @content
+
+    @if $breakpoint == large
+        @media only screen and (max-width: 992px)
+            @content
+
+    @if $breakpoint == custom-1120px
+        @media only screen and (max-width: 1120px)
+            @content
+
+    @if $breakpoint == extra-large
+        @media only screen and (max-width: 1310px)
             @content
 
 *, ::after, ::before
@@ -30,6 +42,8 @@ $color-back: rgba(82, 0, 217, 0.1)
 
 html
     font-size: 62.5%
+    @include adaptive(extra-large)
+        font-size: 56.25%
 
 body
     overflow-x: hidden
@@ -43,7 +57,10 @@ a
 .container
     max-width: 1240px
     margin: 0 auto
-
+    @include adaptive(extra-large)
+        padding: 0 40px
+    @include adaptive(medium)
+        padding: 0 20px
 @keyframes scrolling
     0%
         transform: translateX(0)

@@ -1,5 +1,7 @@
 .countries
     margin-bottom: 15rem
+    @include adaptive(extra-large)
+        margin-bottom: 100px
     &__container
         display: flex
         width: 100%
@@ -10,12 +12,16 @@
     &__wrap-item
         display: flex
         width: 200%
-        // animation: scrolling 25s linear infinite
+        animation: scrolling 25s linear infinite
     &__item
         font-family: "Inter", sans-serif
         font-weight: 800
-        font-size: 6.4rem
+        font-size: 64px
         color: black
         white-space: nowrap
         padding: 0 3rem
         width: 100%
+        @include adaptive(extra-large)
+            font-size: 56px
+        @include adaptive(custom-928px)
+            font-size: 40px
