@@ -1,0 +1,75 @@
+.btn-sale
+    display: flex
+    align-items: center
+    font-family: "Inter", sans-serif
+    font-weight: 300
+    font-size: 16px
+    line-height: 91%
+    color: $color-white
+    border: 1px solid $color-white
+    border-radius: 5px
+    background: transparent
+    padding: 0.8rem
+    cursor: pointer
+    @include adaptive(medium)
+        font-size: 20px
+        margin-bottom: 40px
+    &__letter-icon
+        width: 2rem
+        height: 1.7rem
+        margin-right: 0.4rem
+        @include adaptive(medium)
+            width: 24px
+            height: 21px
+
+.nav-menu
+    &__list
+        display: flex
+        gap: 17.1rem
+        @include adaptive(extra-large)
+            gap: 116px
+        @include adaptive(large)
+            gap: 80px
+        @include adaptive(medium)
+            flex-direction: column-reverse
+            gap: 40px
+    &__link
+        font-family: "Inter", sans-serif
+        font-weight: 300
+        font-size: 16px
+        line-height: 91%
+        color: $color-white
+        @include adaptive(medium)
+            font-size: 20px
+    &__link-product
+        display: flex
+        align-items: center
+        margin-bottom: 0.8rem
+    &__product-icon
+        margin-left: 4px
+        width: 8px
+        height: 4px
+        @include adaptive(medium)
+            width: 10px
+            height: 6px
+    &__accordeon-list
+        display: none
+        position: absolute
+        border-radius: 5px
+        background-color: $color-blue
+    &__accordeon-item
+        padding: 0.8rem
+    &__accordeon-link
+        font-family: "Inter", sans-serif
+        font-weight: 300
+        font-size: 14px
+        line-height: 91%
+        color: $color-white
+        @include adaptive(medium)
+            font-size: 20px
+
+.accordeon-list--active
+    display: block
+
+.product-icon--active
+    transform: rotate(0.5turn)

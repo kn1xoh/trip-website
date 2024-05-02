@@ -2,6 +2,8 @@
     margin-bottom: 1rem
     @include adaptive(extra-large)
         margin-bottom: 127px
+    @include adaptive(medium)
+        margin-bottom: 64px
     &__container
         padding-left: 10.6rem
         @include adaptive(extra-large)
@@ -17,6 +19,7 @@
         display: flex
         align-items: center
         @include adaptive(medium)
+            flex-direction: column
             &:not(:last-child)
                 margin-bottom: 48px
     &__title
@@ -34,7 +37,7 @@
             bottom: 0
             border-right: 1px solid $color-blue
             border-bottom: 1px solid $color-blue
-            z-index: 10
+            z-index: 1
     &__text
         max-width: 50.5rem
 
@@ -90,6 +93,8 @@
     transform: translateY(-8rem)
     @include adaptive(extra-large)
         transform: translateY(0)
+    @include adaptive(medium)
+        flex-direction: column-reverse
 
 .about-flex-3
     transform: translateY(-11rem)
@@ -100,3 +105,5 @@
     transform: translateY(-14rem)
     @include adaptive(extra-large)
         transform: translateY(0)
+    @include adaptive(medium)
+        flex-direction: column-reverse

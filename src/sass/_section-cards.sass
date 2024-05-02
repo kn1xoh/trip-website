@@ -2,6 +2,8 @@
     margin-bottom: 15rem
     @include adaptive(extra-large)
         margin-bottom: 100px
+    @include adaptive(medium)
+        margin-bottom: 64px
     &__title
         text-align: center
         margin-bottom: 5.6rem
@@ -17,6 +19,8 @@
         @include adaptive(large)
             grid-template-columns: repeat(2, 354px)
             grid-template-rows: repeat(2, 213px)
+        @include adaptive(medium)
+            grid-template-columns: repeat(2, 258px)
     &__card
         position: relative
         display: flex
@@ -30,6 +34,8 @@
             padding: 0 0 0.8rem 0
         @include adaptive(large)
             justify-content: center
+        @include adaptive(medium)
+            padding: 10px 25px
     &__number
         font-family: "Inter", sans-serif
         font-weight: 800
@@ -47,6 +53,8 @@
         @include adaptive(large)
             padding-top: 10px
             padding-left: 32px
+        @include adaptive(medium)
+            padding-left: 7px
     &__icon
         margin-top: 4rem
         margin-bottom: 3rem
@@ -69,6 +77,8 @@
         height: auto
     @include adaptive(large)
         width: 90px
+    @include adaptive(medium)
+        width: 78px
 
 .icon-card-2
     width: 11.2rem
@@ -78,6 +88,8 @@
         height: auto
     @include adaptive(large)
         width: 112px
+    @include adaptive(medium)
+        width: 97px
 
 .icon-card-3, .icon-card-4
     width: 11.4rem
@@ -87,3 +99,5 @@
         height: auto
     @include adaptive(large)
         width: 114px
+    @include adaptive(medium)
+        width: 100px

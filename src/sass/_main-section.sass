@@ -3,6 +3,8 @@
     width: 100vw
     height: 100vh
     margin-bottom: 3.2rem
+    @include adaptive(medium)
+        margin-bottom: 55px
     &__wrap
         display: flex
         flex-direction: column
@@ -11,6 +13,8 @@
         margin-bottom: 2rem
     &__title-2
         margin-bottom: 4.5rem
+        @include adaptive(medium)
+        margin-bottom: 24px
     &__filter
         margin-bottom: 4rem
 
@@ -25,3 +29,5 @@
     background: $color-blue
     padding: 2.4rem 3.2rem
     cursor: pointer
+    @include adaptive(medium)
+        font-size: 15px
