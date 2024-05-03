@@ -49,7 +49,7 @@ inputDate.forEach((input) => {
 function currentDate() {
   const now = new Date();
   const year = now.getFullYear();
-  const month = `${now.getMonth()}`.padStart(2, 0);
+  const month = `${now.getMonth() + 1}`.padStart(2, 0);
   const date = `${now.getDate()}`.padStart(2, 0);
   const currentInput = `${year}-${month}-${date}`;
 
@@ -206,5 +206,7 @@ burger.addEventListener("click", () => {
   // Убирает прокрутку при расскрытом меню бургера
   if (burger.classList.contains("burger--active")) {
     document.querySelector("body").style.overflowY = "hidden";
+  } else {
+    document.querySelector("body").style.overflowY = "scroll";
   }
 });

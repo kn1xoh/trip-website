@@ -6,14 +6,16 @@
         margin-bottom: 64px
     &__container
         display: flex
-        width: 100%
         overflow: hidden
         border-top: 3px solid $color-blue
         border-bottom: 3px solid $color-blue
         padding: 4rem 0
+        @include adaptive(large)
+            padding: 32px 0
+        @include adaptive(custom-928px)
+            padding: 24px 0
     &__wrap-item
         display: flex
-        width: 200%
         animation: scrolling 25s linear infinite
     &__item
         font-family: "Inter", sans-serif
@@ -27,3 +29,5 @@
             font-size: 56px
         @include adaptive(custom-928px)
             font-size: 40px
+        @include adaptive(small)
+            font-size: 30px

@@ -14,7 +14,6 @@
             padding-left: 40px
         @include adaptive(medium)
             padding-left: 20px
-
     &__flex-wrap
         display: flex
         align-items: center
@@ -22,6 +21,9 @@
             flex-direction: column
             &:not(:last-child)
                 margin-bottom: 48px
+        @include adaptive(small)
+            &:not(:last-child)
+                margin: 0
     &__title
         font-weight: 500
         position: relative
@@ -38,6 +40,12 @@
             border-right: 1px solid $color-blue
             border-bottom: 1px solid $color-blue
             z-index: 1
+            @include adaptive(extra-large)
+                width: 83px
+                height: 37px
+            @include adaptive(small)
+                width: 83px
+                height: 31px
     &__text
         max-width: 50.5rem
 
@@ -52,6 +60,7 @@
         margin-left: 33px
         width: 249px
         height: auto
+        margin: 0
 
 .about-img-2
     width: 39.9rem
@@ -64,6 +73,7 @@
         margin-right: 33px
         width: 249px
         height: auto
+        margin: 0
 
 .about-img-3
     width: 57.6rem
@@ -76,6 +86,7 @@
         margin-left: 0
         width: 292px
         height: auto
+        margin: 0
 
 .about-img-4
     width: 39.9rem
@@ -88,6 +99,7 @@
         margin-right: 33px
         width: 249px
         height: auto
+        margin: 0
 
 .about-flex-2
     transform: translateY(-8rem)

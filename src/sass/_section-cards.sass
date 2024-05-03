@@ -7,6 +7,8 @@
     &__title
         text-align: center
         margin-bottom: 5.6rem
+        @include adaptive(small)
+            font-size: 20px
     &__cards-wrap
         display: grid
         grid-template-columns: repeat(4, 29.5rem)
@@ -21,6 +23,8 @@
             grid-template-rows: repeat(2, 213px)
         @include adaptive(medium)
             grid-template-columns: repeat(2, 258px)
+        @include adaptive(small)
+            grid-template-columns: repeat(1, 300px)
     &__card
         position: relative
         display: flex
