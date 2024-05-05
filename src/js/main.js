@@ -210,3 +210,25 @@ burger.addEventListener("click", () => {
     document.querySelector("body").style.overflowY = "scroll";
   }
 });
+
+// Прозрачное меню в header
+const nav = document.querySelector(".nav-menu");
+
+function hover(e, opacity) {
+  if (e.target.classList.contains("nav-menu__link")) {
+    const link = e.target;
+    const siblings = link
+      .closest(".nav-menu")
+      .querySelectorAll(".nav-menu__link");
+
+    siblings.forEach((el) => {
+      if (el !== link) {
+        el.style.opacity = this;
+      }
+    });
+  }
+}
+
+nav.addEventListener("mouseover", hover.bind(0.5));
+
+nav.addEventListener("mouseout", hover.bind(1));

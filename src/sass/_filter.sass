@@ -143,6 +143,7 @@
     &__select-person-icon
         width: 1.3rem
         height: 0.7rem
+        transition: .2s all
 
 .country-list--active
     display: block
@@ -162,6 +163,9 @@
     z-index: 1
     @include adaptive(extra-large)
         padding: 15px 20px
+    @include adaptive(custom-928px)
+        overflow-y: scroll
+        height: 162px
     @include adaptive(small)
         top: 30px
         width: 50%
