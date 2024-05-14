@@ -14,6 +14,8 @@
     transition: 0.2s all
     &:hover
         background: $color-blue
+        @include adaptive(medium)
+            background: transparent
     @include adaptive(medium)
         font-size: 20px
         margin-bottom: 40px
@@ -64,14 +66,18 @@
         background-color: $color-blue
     &__accordeon-item
         padding: 0.8rem
+        color: $color-white
+        transition: .1s
+        cursor: pointer
+        &:hover
+            background: $color-white
+            color: $color-dark
     &__accordeon-link
         font-family: "Inter", sans-serif
         font-weight: 300
         font-size: 14px
         line-height: 91%
-        color: $color-white
-        &:hover
-            opacity: 0.8
+        color: inherit
         @include adaptive(medium)
             font-size: 20px
 

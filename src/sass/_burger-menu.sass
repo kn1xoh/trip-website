@@ -21,23 +21,23 @@
     height: 100%
     background: black
     padding: 28px 20px
-    transform: translateY(-100%)
-    transition: 0.3s
+    transform: translateX(100%)
+    transition: transform .3s ease
     z-index: 10
     &__list
         display: flex
         flex-direction: column
-        gap: 40px
+        gap: 25px
     &__link
-        font-family: "Inter", sans-serif
         font-weight: 300
         font-size: 20px
         line-height: 91%
         color: $color-white
+        text-decoration: none
 
 .burger--active
     span
         transform: translateX(0)
 
 .burger-menu--active
-    transform: translateY(0)
+    transform: translateX(0)

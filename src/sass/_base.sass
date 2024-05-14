@@ -5,7 +5,47 @@ $color-dark: #11002D
 $color-back: rgba(82, 0, 217, 0.1)
 $color-blue-mobile: #F2EAFF
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap')
+@font-face
+    font-family: "Inter"
+    src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff1") format("woff1")
+    font-style: normal
+    font-weight: 300
+    font-display: swap
+
+@font-face
+    font-family: "Inter"
+    src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff1") format("woff1")
+    font-style: normal
+    font-weight: 400
+    font-display: swap
+
+@font-face
+    font-family: "Inter"
+    src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff1") format("woff1")
+    font-style: normal
+    font-weight: 500
+    font-display: swap
+
+@font-face
+    font-family: "Inter"
+    src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff1") format("woff1")
+    font-style: normal
+    font-weight: 600
+    font-display: swap
+
+@font-face
+    font-family: "Inter"
+    src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff1") format("woff1")
+    font-style: normal
+    font-weight: 700
+    font-display: swap
+
+@font-face
+    font-family: "Inter"
+    src: url("../fonts/Inter-ExtraBold.woff2") format("woff2"), url("../fonts/Inter-ExtraBold.woff2") format("woff1")
+    font-style: normal
+    font-weight: 800
+    font-display: swap
 
 @mixin adaptive($breakpoint)
     @if $breakpoint == extra-small
@@ -36,10 +76,9 @@ $color-blue-mobile: #F2EAFF
         @media only screen and (max-width: 1310px)
             @content
 
-*, ::after, ::before
-    margin: 0
-    padding: 0
-    box-sizing: border-box
+    @if $breakpoint == max-hight-600
+        @media only screen and (max-hight: 600px)
+            @content
 
 html
     font-size: 62.5%
@@ -47,13 +86,8 @@ html
         font-size: 56.25%
 
 body
+    font-family: "Inter", sans-serif
     overflow-x: hidden
-
-ul
-    list-style-type: none
-
-a
-    text-decoration: none
 
 .container
     max-width: 1240px
@@ -62,6 +96,7 @@ a
         padding: 0 40px
     @include adaptive(medium)
         padding: 0 20px
+
 @keyframes scrolling
     0%
         transform: translateX(0)

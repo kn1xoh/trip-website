@@ -1,0 +1,59 @@
+.nav-menu
+    &__list
+        display: flex
+        gap: 17.1rem
+        @include adaptive(extra-large)
+            gap: 116px
+        @include adaptive(large)
+            gap: 80px
+        @include adaptive(medium)
+            flex-direction: column
+            gap: 40px
+    &__link
+        font-weight: 300
+        font-size: 16px
+        line-height: 91%
+        color: $color-white
+        text-decoration: none
+        transition: opacity .2s ease
+        @include adaptive(medium)
+            font-size: 20px
+    &__link-product
+        display: flex
+        align-items: center
+        margin-bottom: 0.8rem
+    &__product-icon
+        margin-left: 4px
+        width: 8px
+        height: 4px
+        transition: transform .2s ease
+        @include adaptive(medium)
+            width: 10px
+            height: 6px
+    &__accordeon-list
+        display: none
+        position: absolute
+        border-radius: 5px
+        background-color: $color-blue
+    &__accordeon-item
+        padding: 0.8rem
+        color: $color-white
+        transition: background .2s ease, color .2s ease
+        cursor: pointer
+        &:hover
+            background: $color-white
+            color: $color-dark
+    &__accordeon-link
+        font-weight: 300
+        font-size: 14px
+        line-height: 91%
+        color: inherit
+        text-decoration: none
+        @include adaptive(medium)
+            font-size: 20px
+
+.accordeon-list--active
+    display: block
+
+.product-icon--active
+    transform: rotate(0.5turn)

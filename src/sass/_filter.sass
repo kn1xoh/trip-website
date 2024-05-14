@@ -29,7 +29,6 @@
             width: 100%
             border: none
     &__input-country
-        font-family: "Inter", sans-serif
         font-weight: 400
         font-size: 18px
         width: 90%
@@ -52,7 +51,6 @@
         position: absolute
         top: 7.4rem
         left: -4rem
-        font-family: "Inter", sans-serif
         font-weight: 400
         font-size: 18px
         color: $color-dark
@@ -67,14 +65,20 @@
             left: -24px
         @include adaptive(medium)
             font-size: 14px
+            top: 50px
         @include adaptive(small)
             top: 30px
             width: 70%
     &__country-item
         padding: 1.2rem 4rem
         cursor: pointer
+        text-overflow: ellipsis
+        overflow: hidden
         &:hover
             background-color: $color-blue-light
+            @include adaptive(medium)
+                background-color: $color-white
+
         @include adaptive(large)
             padding: 11px 24px
     &__date
@@ -94,7 +98,6 @@
             padding: 0
             width: 100%
     &__date-input
-        font-family: "Inter", sans-serif
         font-weight: 400
         font-size: 18px
         width: 132px
@@ -116,7 +119,6 @@
             width: 120px
     &__persons
         position: relative
-        font-family: "Inter", sans-serif
         font-weight: 400
         font-size: 18px
         padding-left: 4rem
@@ -143,7 +145,7 @@
     &__select-person-icon
         width: 1.3rem
         height: 0.7rem
-        transition: .2s all
+        transition: transform .2s ease
 
 .country-list--active
     display: block
@@ -154,7 +156,6 @@
     top: 6.1rem
     left: 0
     width: 113.7%
-    font-family: "Inter", sans-serif
     font-weight: 400
     color: $color-dark
     background: $color-white

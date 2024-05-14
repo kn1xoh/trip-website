@@ -1,0 +1,50 @@
+.btn-sale
+    display: flex
+    align-items: center
+    font-weight: 300
+    font-size: 16px
+    line-height: 91%
+    color: $color-white
+    border: 1px solid $color-white
+    border-radius: 5px
+    background: transparent
+    padding: 0.8rem
+    cursor: pointer
+    transition: background .2s ease
+    &:hover
+        background: $color-blue
+        @include adaptive(medium)
+            background: transparent
+    @include adaptive(medium)
+        font-size: 20px
+        margin-bottom: 40px
+    &__letter-icon
+        width: 2rem
+        height: 1.7rem
+        margin-right: 0.4rem
+        @include adaptive(medium)
+            width: 24px
+            height: 21px
+
+.btn-cost
+    border: none
+    border-radius: 5px
+    color: $color-white
+    background: $color-blue
+    padding: 2.4rem 3.2rem
+    cursor: pointer
+    transition: background .2s ease, color .2s ease
+    &:hover
+        color: $color-dark
+        background: $color-white
+        @include adaptive(medium)
+            color: $color-white
+            background: $color-blue
+    @include adaptive(medium)
+        font-size: 15px
+    &__link
+        color: inherit
+        font-weight: 800
+        font-size: 18px
+        line-height: 91%
+        text-decoration: none
