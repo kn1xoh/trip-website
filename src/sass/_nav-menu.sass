@@ -1,11 +1,14 @@
 .nav-menu
     &__list
         display: flex
-        gap: 17.1rem
+        align-items: center
+        gap: 171px
         @include adaptive(extra-large)
             gap: 116px
         @include adaptive(large)
             gap: 80px
+        @include adaptive(custom-928px)
+            gap: 50px
         @include adaptive(medium)
             flex-direction: column
             gap: 40px
@@ -16,12 +19,9 @@
         color: $color-white
         text-decoration: none
         transition: opacity .2s ease
-        @include adaptive(medium)
-            font-size: 20px
-    &__link-product
+    &__link--product
         display: flex
         align-items: center
-        margin-bottom: 0.8rem
     &__product-icon
         margin-left: 4px
         width: 8px
@@ -35,8 +35,9 @@
         position: absolute
         border-radius: 5px
         background-color: $color-blue
+        margin-top: 8px
     &__accordeon-item
-        padding: 0.8rem
+        padding: 5px 8px
         color: $color-white
         transition: background .2s ease, color .2s ease
         cursor: pointer

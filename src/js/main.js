@@ -1,4 +1,4 @@
-const linkProduct = document.querySelector(".nav-menu__link-product");
+const linkProduct = document.querySelector(".nav-menu__link--product");
 const accordeonList = document.querySelector(".nav-menu__accordeon-list");
 const iconProduct = document.querySelector(".nav-menu__product-icon");
 const inputCountry = document.querySelector(".filter__input-country");

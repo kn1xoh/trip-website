@@ -1,26 +1,26 @@
 .slider
     width: 100%
-    height: 22rem
+    height: 220px
     position: relative
     overflow: hidden
-    margin-bottom: 1.6rem
+    margin-bottom: 16px
 
 .slide
     position: absolute
     top: 0
     width: 100%
     display: grid
-    grid-template-columns: repeat(4, 29.5rem)
-    grid-template-rows: 22rem
+    grid-template-columns: repeat(4, 295px)
+    grid-template-rows: 220px
     justify-content: center
-    gap: 2rem
+    gap: 20px
     transition: transform .5s ease
     @include adaptive(extra-large)
-        grid-template-columns: repeat(3, 29.5rem)
-    @include adaptive(custom-928px)
-        grid-template-columns: repeat(2, 29.5rem)
-    @include adaptive(small)
-        grid-template-columns: 29.5rem
+        grid-template-columns: repeat(3, 290px)
+    @include adaptive(large)
+        grid-template-columns: repeat(2, 290px)
+    @include adaptive(medium)
+        grid-template-columns: 295px
 
 .slider-dots
     display: flex
