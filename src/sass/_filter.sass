@@ -87,12 +87,15 @@
         border-right: 1px solid $color-blue
         width: 20%
         padding: 0 35px
+        @include adaptive(extra-large)
+            padding: 0 25px
         @include adaptive(custom-1120px)
-            padding: 0 20px
+            padding: 0 15px
         @include adaptive(large)
             width: 25%
+            padding: 0 20px
         @include adaptive(medium)
-            padding: 0 12px
+            padding: 0 10px
         @include adaptive(small)
             background: $color-blue-mobile
             border-radius: 5px
@@ -104,23 +107,20 @@
     &__date-input
         font-weight: 400
         font-size: 18px
-        width: 132px
+        width: 100%
         height: 48px
         border: none
         cursor: pointer
         @include adaptive(large)
             font-size: 16px
-            width: 120px
         @include adaptive(medium)
             font-size: 14px
-            width: 103px
             height: 30px
         @include adaptive(small)
             height: 28px
             background: $color-blue-mobile
             border-radius: 5px
-            padding: 8px
-            width: 120px
+            padding: 3px 8px
     &__persons
         position: relative
         font-weight: 400
@@ -166,6 +166,7 @@
     border-radius: 5px
     padding: 20px 39px
     z-index: 1
+    user-select: none
     @include adaptive(extra-large)
         padding: 15px 20px
     @include adaptive(custom-928px)

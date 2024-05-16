@@ -9,17 +9,54 @@ const persons = document.querySelector(".filter__persons-wrap");
 const selectPersonIcon = document.querySelector(".filter__select-person-icon");
 const personCalc = document.querySelector(".filter__person-calc");
 
+// Убирает интерактив при клике вне элемента
+document.addEventListener("click", (e) => {
+  const outLinkProduct = e.composedPath().includes(linkProduct);
+  if (!outLinkProduct) {
+    accordeonList.classList.remove("accordeon-list--active");
+  }
+  rotateIconProduct();
+
+  const outInputCountry = e.composedPath().includes(inputCountry);
+  const outListCountry = e.composedPath().includes(listCountry);
+  if (!outInputCountry && !outListCountry) {
+    listCountry.classList.remove("country-list--active");
+  }
+
+  const outPersons = e.composedPath().includes(persons);
+  const outpersonCalc = e.composedPath().includes(personCalc);
+  if (!outPersons && !outpersonCalc) {
+    personCalc.classList.remove("person-calc--active");
+  }
+  rotateIconPerson();
+});
+
 // Клик на "Продукты"
 linkProduct.addEventListener("click", function () {
   listCountry.classList.remove("country-list--active");
   personCalc.classList.remove("person-calc--active");
   accordeonList.classList.toggle("accordeon-list--active");
+
+  rotateIconProduct();
+});
+
+// Вращает иконку в навигационном меню
+function rotateIconProduct() {
   if (accordeonList.classList.contains("accordeon-list--active")) {
     iconProduct.classList.add("product-icon--active");
   } else {
     iconProduct.classList.remove("product-icon--active");
   }
-});
+}
+
+// Вращает иконку в фильтре
+function rotateIconPerson() {
+  if (personCalc.classList.contains("person-calc--active")) {
+    selectPersonIcon.classList.add("select-person-icon--active");
+  } else {
+    selectPersonIcon.classList.remove("select-person-icon--active");
+  }
+}
 
 // Клик на "Куда едем?"
 inputCountry.addEventListener("click", function () {

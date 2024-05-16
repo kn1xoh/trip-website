@@ -104,14 +104,7 @@ function cleanDist() {
 
 function building() {
   return src(
-    [
-      "src/css/*.css",
-      "src/img/*.*",
-      "!src/img/*.svg",
-      "src/img/sprite.svg",
-      "src/fonts/*.*",
-      "src/js/main.min.js",
-    ],
+    ["src/css/*.css", "src/img/*.*", "src/fonts/*.*", "src/js/main.min.js"],
     {
       base: "src",
     }
