@@ -8,26 +8,6 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <div class="burger-menu">
-        <button class="btn-sale burger-menu__btn-sale">
-            <svg class="btn-sale__letter-icon">
-                <use href="img/sprite.svg#letter"></use>
-            </svg> Скидки
-        </button>
-
-        <nav class="burger-menu__nav">
-            <ul class="burger-menu__list">
-                <li class="burger-menu__item"><a class="burger-menu__link" href="#">Отзывы</a></li>
-                <li class="burger-menu__item"><a class="burger-menu__link" href="#">Партнерам</a></li>
-                <li class="burger-menu__item"><a class="burger-menu__link" href="#">Продукты</a></li>
-                <li class="burger-menu__item"><a class="burger-menu__link" href="#">Страхование для Шенгена</a></li>
-                <li class="burger-menu__item"><a class="burger-menu__link" href="#">Страхование в России</a></li>
-                <li class="burger-menu__item"><a class="burger-menu__link" href="#">Горнолыжная страховка</a></li>
-                <li class="burger-menu__item"><a class="burger-menu__link" href="#">Годовая страховка</a></li>
-            </ul>
-        </nav>
-    </div>
-
     <main>
         <section class="main-section">
             <div class="container">
@@ -74,18 +54,19 @@
                     </button>
 
                     <div class="burger">
-                        <span class="burger__span-1 burger__span"></span>
+                        <span class="burger__span burger__span-1"></span>
                         <span class="burger__span"></span>
                         <span class="burger__span"></span>
                     </div>
                 </header>
+
                 <div class="main-section__wrap">
                     <h1 class="main-section__title-1 title-1">Страхование путешественников</h1>
                     <h2 class="main-section__title-2 title-2">Полис, который действительно работает</h2>
 
                     <div class="main-section__filter filter">
                         <form class="filter__search-country" action="#">
-                            <input class="filter__input-country" type="search" name="search-country" placeholder="Куда едем?">
+                            <input class="filter__input-country" type="search" name="search-country" placeholder="Куда едем?" required>
                             <ul class="filter__country-list">
                                 <li class="filter__country-item">Великобритания</li>
                                 <li class="filter__country-item">Германия</li>
@@ -97,11 +78,11 @@
                         </form>
 
                         <form class="filter__date" action="#">
-                            <input class="filter__date-input" type="date" name="date">
+                            <input class="filter__date-input" type="date" name="date" required>
                         </form>
 
                         <form class="filter__date" action="#">
-                            <input class="filter__date-input" type="date" name="date">
+                            <input class="filter__date-input" type="date" name="date" required>
                         </form>
 
                         <div class="filter__persons">
@@ -579,6 +560,26 @@
             </div>
         </div>
     </footer>
+
+    <div class="burger-menu">
+        <button class="btn-sale burger-menu__btn-sale">
+            <svg class="btn-sale__letter-icon">
+                <use href="img/sprite.svg#letter"></use>
+            </svg> Скидки
+        </button>
+
+        <nav class="burger-menu__nav">
+            <ul class="burger-menu__list">
+                <li class="burger-menu__item"><a class="burger-menu__link" href="#">Отзывы</a></li>
+                <li class="burger-menu__item"><a class="burger-menu__link" href="#">Партнерам</a></li>
+                <li class="burger-menu__item"><a class="burger-menu__link" href="#">Продукты</a></li>
+                <li class="burger-menu__item"><a class="burger-menu__link" href="#">Страхование для Шенгена</a></li>
+                <li class="burger-menu__item"><a class="burger-menu__link" href="#">Страхование в России</a></li>
+                <li class="burger-menu__item"><a class="burger-menu__link" href="#">Горнолыжная страховка</a></li>
+                <li class="burger-menu__item"><a class="burger-menu__link" href="#">Годовая страховка</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <script src="js/main.min.js"></script>
 

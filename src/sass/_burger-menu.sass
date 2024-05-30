@@ -18,6 +18,7 @@
 .burger-menu
     visibility: hidden
     position: fixed
+    inset: 0
     width: 100%
     height: 100%
     background: $color-dark
@@ -40,8 +41,14 @@
         margin-bottom: 30px
 
 .burger--active
-    &__span
-        transform: translateX(0)
+    span
+        transition: transform .2s ease
+        &:nth-child(1)
+            visibility: hidden
+        &:nth-child(2)
+            transform: translateY(1px) rotate(45deg)
+        &:nth-child(3)
+            transform: translateY(-8px) rotate(-45deg)
 
 .burger-menu--active
     visibility: visible

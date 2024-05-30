@@ -17,6 +17,8 @@
     &__wrap-item
         display: flex
         animation: scrolling 25s linear infinite
+        @include adaptive(medium)
+            animation: scrolling 15s linear infinite
     &__item
         font-weight: 800
         font-size: 64px
