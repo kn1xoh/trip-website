@@ -167,7 +167,7 @@ function createDots() {
     dotsContainer.insertAdjacentHTML(
       "beforeend",
       `
-      <button class="slider-dots__dot" data-slide="${i}"></button>
+      <button class="slider-dots__dot" data-slide="${i}" aria-label="слайд ${i + 1}"></button>
     `
     );
   });

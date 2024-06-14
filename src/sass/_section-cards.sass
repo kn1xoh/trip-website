@@ -13,14 +13,17 @@
         display: grid
         grid-template-columns: repeat(4, 295px)
         grid-template-rows: 295px
+        grid-auto-rows: 295px
         gap: 20px
         justify-content: center
         @include adaptive(extra-large)
             grid-template-columns: repeat(4, 213px)
             grid-template-rows: 213px
+            grid-auto-rows: 213px
         @include adaptive(large)
             grid-template-columns: repeat(2, 354px)
             grid-template-rows: repeat(2, 213px)
+            grid-auto-rows: 213px
         @include adaptive(medium)
             grid-template-columns: repeat(2, 258px)
         @include adaptive(small)
@@ -29,36 +32,39 @@
         position: relative
         display: flex
         flex-direction: column
-        justify-content: center
+        justify-content: flex-end
         align-items: center
-        background: $color-back
+        background-color: $color-back
         border-radius: 5px
         padding: 34px 42px
+        background-repeat: no-repeat
+        background-position: center top 70px
+        &::after
+            content: "1"
+            font-weight: 800
+            font-size: 128px
+            color: $color-blue
+            opacity: 0.1
+            position: absolute
+            top: -23px
+            left: 0
+            padding-left: 20px
+            @include adaptive(extra-large)
+                font-size: 93px
+                padding-left: 7px
+            @include adaptive(large)
+                padding-left: 32px
+            @include adaptive(medium)
+                padding-left: 7px
+            @include adaptive(small)
+                padding-left: 23px
         @include adaptive(extra-large)
             padding: 0 0 8px 0
+            background-position: center top 41px
         @include adaptive(large)
-            justify-content: center
+            padding: 0 0 20px 0
         @include adaptive(medium)
             padding: 10px 25px
-
-    &__number
-        font-weight: 800
-        font-size: 128px
-        color: $color-blue
-        opacity: 0.1
-        position: absolute
-        top: 0
-        left: 0
-        padding-left: 20px
-        @include adaptive(extra-large)
-            font-size: 93px
-            padding-left: 7px
-            transform: translateY(-14px)
-        @include adaptive(large)
-            padding-top: 10px
-            padding-left: 32px
-        @include adaptive(medium)
-            padding-left: 7px
     &__icon
         margin-top: 40px
         margin-bottom: 30px
@@ -72,35 +78,44 @@
         text-align: center
         color: black
 
-.icon-card-1
-    width: 90px
-    height: 114px
+.section-cards__card--1
+    background-image: url("../img/icon-card-1.svg")
     @include adaptive(extra-large)
-        width: 78px
-        height: auto
+        background-size: 80px auto
     @include adaptive(large)
-        width: 90px
+        background-size: 90px auto
     @include adaptive(medium)
-        width: 78px
+        background-size: 80px auto
 
-.icon-card-2
-    width: 112px
-    height: 112px
+.section-cards__card--2
+    background-image: url("../img/icon-card-2.svg")
+    &::after
+        content: "2"
     @include adaptive(extra-large)
-        width: 97px
-        height: auto
+        background-size: 98px auto
     @include adaptive(large)
-        width: 112px
+        background-size: 112px auto
     @include adaptive(medium)
-        width: 97px
+        background-size: 98px auto
 
-.icon-card-3, .icon-card-4
-    width: 114px
-    height: 114px
+.section-cards__card--3
+    background-image: url("../img/icon-card-3.svg")
+    &::after
+        content: "3"
     @include adaptive(extra-large)
-        width: 100px
-        height: auto
+        background-size: 100px auto
     @include adaptive(large)
-        width: 114px
+        background-size: 114px auto
     @include adaptive(medium)
-        width: 100px
+        background-size: 100px auto
+
+.section-cards__card--4
+    background-image: url("../img/icon-card-4.svg")
+    &::after
+        content: "4"
+    @include adaptive(extra-large)
+        background-size: 100px auto
+    @include adaptive(large)
+        background-size: 114px auto
+    @include adaptive(medium)
+        background-size: 100px auto
