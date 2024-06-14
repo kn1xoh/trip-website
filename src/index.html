@@ -63,96 +63,97 @@
                 <div class="main-section__wrap">
                     <h1 class="main-section__title-1 title-1">Страхование путешественников</h1>
                     <h2 class="main-section__title-2 title-2">Полис, который действительно работает</h2>
-
-                    <form class="main-section__filter filter" action="#" method="post">
-                        <div class="filter__search-country">
-                            <input class="filter__input-country" type="search" name="search-country" placeholder="Куда едем?" required>
-                            <ul class="filter__country-list">
-                                <li class="filter__country-item">Великобритания</li>
-                                <li class="filter__country-item">Германия</li>
-                                <li class="filter__country-item">Франция</li>
-                                <li class="filter__country-item">Чехия</li>
-                                <li class="filter__country-item">Дания</li>
-                                <li class="filter__country-item">Финляндия</li>
-                            </ul>
-                        </div>
-
-                        <div class="filter__date">
-                            <input class="filter__date-input" type="date" name="date-start" required>
-                        </div>
-
-                        <div class="filter__date">
-                            <input class="filter__date-input" type="date" name="date-end" required>
-                        </div>
-
-                        <div class="filter__persons">
-                            <div class="filter__persons-wrap">
-                                <div class="filter__persons-label">
-                                    <span id="total-persons">1</span>
-                                    <span id="label-persons">человек</span>
-                                </div>
-                                <svg class="filter__select-person-icon">
-                                    <use href="img/sprite.svg#select-person"></use>
-                                </svg>
+                    <form class="main-section__filter-form filter-form" action="#" method="post">
+                        <div class="main-section__filter filter">
+                            <div class="filter__search-country">
+                                <input class="filter__input-country" type="search" name="search-country" placeholder="Куда едем?" required>
+                                <ul class="filter__country-list">
+                                    <li class="filter__country-item">Великобритания</li>
+                                    <li class="filter__country-item">Германия</li>
+                                    <li class="filter__country-item">Франция</li>
+                                    <li class="filter__country-item">Чехия</li>
+                                    <li class="filter__country-item">Дания</li>
+                                    <li class="filter__country-item">Финляндия</li>
+                                </ul>
                             </div>
 
-                            <div class="filter__person-calc person-calc">
-                                <div class="person-calc__wrap">
-                                    <div class="person-calc__title">Дети до 3-х лет</div>
-                                    <div class="person-calc__counter">
-                                        <svg class="person-calc__icon">
-                                            <use href="img/sprite.svg#minus"></use>
-                                        </svg>
-                                        <span class="person-calc__number">0</span>
-                                        <svg class="person-calc__icon">
-                                            <use href="img/sprite.svg#plus"></use>
-                                        </svg>
+                            <div class="filter__date">
+                                <input class="filter__date-input" type="date" name="date-start" required>
+                            </div>
+
+                            <div class="filter__date">
+                                <input class="filter__date-input" type="date" name="date-end" required>
+                            </div>
+
+                            <div class="filter__persons">
+                                <div class="filter__persons-wrap">
+                                    <div class="filter__persons-label">
+                                        <span id="total-persons">1</span>
+                                        <span id="label-persons">человек</span>
                                     </div>
+                                    <svg class="filter__select-person-icon">
+                                        <use href="img/sprite.svg#select-person"></use>
+                                    </svg>
                                 </div>
 
-                                <div class="person-calc__wrap">
-                                    <div class="person-calc__title">Дети<br><span>от 4 до 17 лет</span></div>
-                                    <div class="person-calc__counter">
-                                        <svg class="person-calc__icon">
-                                            <use href="img/sprite.svg#minus"></use>
-                                        </svg>
-                                        <span class="person-calc__number">0</span>
-                                        <svg class="person-calc__icon">
-                                            <use href="img/sprite.svg#plus"></use>
-                                        </svg>
+                                <div class="filter__person-calc person-calc">
+                                    <div class="person-calc__wrap">
+                                        <div class="person-calc__title">Дети до 3-х лет</div>
+                                        <div class="person-calc__counter">
+                                            <svg class="person-calc__icon">
+                                                <use href="img/sprite.svg#minus"></use>
+                                            </svg>
+                                            <span class="person-calc__number">0</span>
+                                            <svg class="person-calc__icon">
+                                                <use href="img/sprite.svg#plus"></use>
+                                            </svg>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="person-calc__wrap">
-                                    <div class="person-calc__title">Взрослые<br><span>от 18 до 69 лет</span></div>
-                                    <div class="person-calc__counter">
-                                        <svg class="person-calc__icon">
-                                            <use href="img/sprite.svg#minus"></use>
-                                        </svg>
-                                        <span class="person-calc__number">1</span>
-                                        <svg class="person-calc__icon">
-                                            <use href="img/sprite.svg#plus"></use>
-                                        </svg>
+                                    <div class="person-calc__wrap">
+                                        <div class="person-calc__title">Дети<br><span>от 4 до 17 лет</span></div>
+                                        <div class="person-calc__counter">
+                                            <svg class="person-calc__icon">
+                                                <use href="img/sprite.svg#minus"></use>
+                                            </svg>
+                                            <span class="person-calc__number">0</span>
+                                            <svg class="person-calc__icon">
+                                                <use href="img/sprite.svg#plus"></use>
+                                            </svg>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="person-calc__wrap">
-                                    <div class="person-calc__title">Взрослые<br><span>от 70 до 79 лет</span></div>
-                                    <div class="person-calc__counter">
-                                        <svg class="person-calc__icon">
-                                            <use href="img/sprite.svg#minus"></use>
-                                        </svg>
-                                        <span class="person-calc__number">0</span>
-                                        <svg class="person-calc__icon">
-                                            <use href="img/sprite.svg#plus"></use>
-                                        </svg>
+                                    <div class="person-calc__wrap">
+                                        <div class="person-calc__title">Взрослые<br><span>от 18 до 69 лет</span></div>
+                                        <div class="person-calc__counter">
+                                            <svg class="person-calc__icon">
+                                                <use href="img/sprite.svg#minus"></use>
+                                            </svg>
+                                            <span class="person-calc__number">1</span>
+                                            <svg class="person-calc__icon">
+                                                <use href="img/sprite.svg#plus"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <div class="person-calc__wrap">
+                                        <div class="person-calc__title">Взрослые<br><span>от 70 до 79 лет</span></div>
+                                        <div class="person-calc__counter">
+                                            <svg class="person-calc__icon">
+                                                <use href="img/sprite.svg#minus"></use>
+                                            </svg>
+                                            <span class="person-calc__number">0</span>
+                                            <svg class="person-calc__icon">
+                                                <use href="img/sprite.svg#plus"></use>
+                                            </svg>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <a class="btn-cost main-section__btn-cost" href="#">Узнать стоимость</a>
                     </form>
-
-                    <div class="btn-cost main-section__btn-cost"><a class="btn-cost__link" href="#" target="_blank">Узнать стоимость</a></div>
                 </div>
             </div>
         </section>
