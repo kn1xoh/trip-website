@@ -47,7 +47,7 @@
                         </ul>
                     </nav>
 
-                    <button class="btn-sale header__btn-sale">
+                    <button class="btn-sale header__btn-sale" type="button">
                         <svg class="btn-sale__letter-icon">
                             <use href="img/sprite.svg#letter"></use>
                         </svg> Скидки
@@ -64,8 +64,8 @@
                     <h1 class="main-section__title-1 title-1">Страхование путешественников</h1>
                     <h2 class="main-section__title-2 title-2">Полис, который действительно работает</h2>
 
-                    <div class="main-section__filter filter">
-                        <form class="filter__search-country" action="#">
+                    <form class="main-section__filter filter" action="#" method="post">
+                        <div class="filter__search-country">
                             <input class="filter__input-country" type="search" name="search-country" placeholder="Куда едем?" required>
                             <ul class="filter__country-list">
                                 <li class="filter__country-item">Великобритания</li>
@@ -75,15 +75,15 @@
                                 <li class="filter__country-item">Дания</li>
                                 <li class="filter__country-item">Финляндия</li>
                             </ul>
-                        </form>
+                        </div>
 
-                        <form class="filter__date" action="#">
-                            <input class="filter__date-input" type="date" name="date" required>
-                        </form>
+                        <div class="filter__date">
+                            <input class="filter__date-input" type="date" name="date-start" required>
+                        </div>
 
-                        <form class="filter__date" action="#">
-                            <input class="filter__date-input" type="date" name="date" required>
-                        </form>
+                        <div class="filter__date">
+                            <input class="filter__date-input" type="date" name="date-end" required>
+                        </div>
 
                         <div class="filter__persons">
                             <div class="filter__persons-wrap">
@@ -150,7 +150,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </form>
 
                     <div class="btn-cost main-section__btn-cost"><a class="btn-cost__link" href="#" target="_blank">Узнать стоимость</a></div>
                 </div>
@@ -285,7 +285,7 @@
                                         <use href="img/sprite.svg#star"></use>
                                     </svg>
                                 </div>
-                                <span class="review__date">05/02/2024</span>
+                                <time class="review__date" datetime="2024-02-01">01/02/2024</time>
                             </div>
 
                             <p class="review__text">Много лет пользуюсь предпочитаю другим компаниям! Оперативный чат, посмотрим как будет дальше! Пока все отлично)</p>
@@ -315,7 +315,7 @@
                                         <use href="img/sprite.svg#star"></use>
                                     </svg>
                                 </div>
-                                <span class="review__date">05/02/2024</span>
+                                <time class="review__date" datetime="2024-02-01">01/02/2024</time>
                             </div>
 
                             <p class="review__text">Много лет пользуюсь предпочитаю другим компаниям! Оперативный чат, посмотрим как будет дальше! Пока все отлично)</p>
@@ -345,7 +345,7 @@
                                         <use href="img/sprite.svg#star"></use>
                                     </svg>
                                 </div>
-                                <span class="review__date">05/02/2024</span>
+                                <time class="review__date" datetime="2024-02-01">01/02/2024</time>
                             </div>
 
                             <p class="review__text">Много лет пользуюсь предпочитаю другим компаниям! Оперативный чат, посмотрим как будет дальше! Пока все отлично)</p>
@@ -375,7 +375,7 @@
                                         <use href="img/sprite.svg#star"></use>
                                     </svg>
                                 </div>
-                                <span class="review__date">05/02/2024</span>
+                                <time class="review__date" datetime="2024-02-01">01/02/2024</time>
                             </div>
 
                             <p class="review__text">Много лет пользуюсь предпочитаю другим компаниям! Оперативный чат, посмотрим как будет дальше! Пока все отлично)</p>
@@ -407,7 +407,7 @@
                                         <use href="img/sprite.svg#star"></use>
                                     </svg>
                                 </div>
-                                <span class="review__date">05/02/2024</span>
+                                <time class="review__date" datetime="2024-02-01">01/02/2024</time>
                             </div>
 
                             <p class="review__text">Много лет пользуюсь предпочитаю другим компаниям! Оперативный чат, посмотрим как будет дальше! Пока все отлично)</p>
@@ -437,7 +437,7 @@
                                         <use href="img/sprite.svg#star"></use>
                                     </svg>
                                 </div>
-                                <span class="review__date">05/02/2024</span>
+                                <time class="review__date" datetime="2024-02-01">01/02/2024</time>
                             </div>
 
                             <p class="review__text">Много лет пользуюсь предпочитаю другим компаниям! Оперативный чат, посмотрим как будет дальше! Пока все отлично)</p>
@@ -467,7 +467,7 @@
                                         <use href="img/sprite.svg#star"></use>
                                     </svg>
                                 </div>
-                                <span class="review__date">05/02/2024</span>
+                                <time class="review__date" datetime="2024-02-01">01/02/2024</time>
                             </div>
 
                             <p class="review__text">Много лет пользуюсь предпочитаю другим компаниям! Оперативный чат, посмотрим как будет дальше! Пока все отлично)</p>
@@ -497,7 +497,7 @@
                                         <use href="img/sprite.svg#star"></use>
                                     </svg>
                                 </div>
-                                <span class="review__date">05/02/2024</span>
+                                <time class="review__date" datetime="2024-02-01">01/02/2024</time>
                             </div>
 
                             <p class="review__text">Много лет пользуюсь предпочитаю другим компаниям! Оперативный чат, посмотрим как будет дальше! Пока все отлично)</p>
@@ -562,7 +562,7 @@
     </footer>
 
     <div class="burger-menu">
-        <button class="btn-sale burger-menu__btn-sale">
+        <button class="btn-sale burger-menu__btn-sale" type="button">
             <svg class="btn-sale__letter-icon">
                 <use href="img/sprite.svg#letter"></use>
             </svg> Скидки
